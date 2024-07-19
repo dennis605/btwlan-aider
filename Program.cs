@@ -1,21 +1,16 @@
 using System;
-using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace Verwaltungsanwendung
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        [STAThread]
+        static void Main()
         {
-            Console.WriteLine("Willkommen zur Verwaltungsanwendung!");
-
-            // Beispielhafte Nutzung der Verwaltungsfunktionen
-            PatientenVerwaltung patientenVerwaltung = new PatientenVerwaltung();
-            BetreuerVerwaltung betreuerVerwaltung = new BetreuerVerwaltung();
-            VeranstaltungsVerwaltung veranstaltungsVerwaltung = new VeranstaltungsVerwaltung();
-            TagesplanVerwaltung tagesplanVerwaltung = new TagesplanVerwaltung();
-
-            // Hier können Sie die Verwaltungsfunktionen aufrufen und testen
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainForm());
         }
     }
 }
